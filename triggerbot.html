@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lonely Docs — Triggerbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Lonely<span class="accent"> Docs</span></div>
+  </header>
+
+  <aside class="sidebar">
+    <details class="nav-group" open>
+      <summary>Getting Started</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#intro">Introduction</a>
+      </div></div>
+    </details>
+    <details class="nav-group" open>
+      <summary>Features</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#usage">Usage</a>
+        <a href="index.html#faq">FAQ</a>
+
+        <details class="nav-group sub collapsed">
+          <summary>Aimbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="aimbot.html#wp-group">Weapon Group</a>
+            <a href="aimbot.html#ab-enabled">Enabled</a>
+            <a href="aimbot.html#ab-mouse-sync">Mouse Sync</a>
+            <a href="aimbot.html#ab-activate">Activate</a>
+            <a href="aimbot.html#ab-mode">Mode</a>
+            <a href="aimbot.html#ab-move">Move</a>
+            <a href="aimbot.html#ab-precise">Precise</a>
+            <a href="aimbot.html#ab-humanized">Humanized</a>
+            <a href="aimbot.html#ab-automatic">AutoMatic</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Aimbot Limits</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="aimbot-limits.html#ab-aim-time">Aim Time Limit</a>
+            <a href="aimbot-limits.html#ab-distance">Distance</a>
+            <a href="aimbot-limits.html#ab-smooth">Smooth</a>
+            <a href="aimbot-limits.html#ab-predict">Predict</a>
+            <a href="aimbot-limits.html#ab-hit-chance">Hit Chance</a>
+            <a href="aimbot-limits.html#ab-delay-shoot">Delay Shoot</a>
+            <a href="aimbot-limits.html#ab-first-slow">First Slow</a>
+            <a href="aimbot-limits.html#ab-rapid-fire">Rapid Fire</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub" open>
+          <summary>Triggerbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="#tb-enabled" class="active">Enabled</a>
+            <a href="#tb-first-slow">First Slow</a>
+            <a href="#tb-hit-chance">Hit Chance</a>
+            <a href="#tb-interval">Interval Delay</a>
+            <a href="#tb-distance">Distance</a>
+            <a href="#tb-hitbox">Hitbox</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Accuracy</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="accuracy.html#ac-norecoil">No Recoil</a>
+            <a href="accuracy.html#ac-nospread">No Spread</a>
+            <a href="accuracy.html#ac-noshake">No Screen Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Misc</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="misc.html#mi-bunnyhop">Bunnyhop</a>
+            <a href="misc.html#mi-fastladder">Fast Ladder</a>
+            <a href="misc.html#mi-viewmodel">Viewmodel</a>
+            <a href="misc.html#mi-nofog">No Fog</a>
+            <a href="misc.html#mi-novomit">No Vomit</a>
+            <a href="misc.html#mi-flashboost">Flash Boost</a>
+            <a href="misc.html#mi-fullbright">FullBright</a>
+            <a href="misc.html#mi-antishake">Anti Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Settings</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="settings.html#st-watermark">Watermark</a>
+          </div></div>
+        </details>
+      </div></div>
+    </details>
+  </aside>
+
+  <main class="content">
+    <h1>Triggerbot</h1>
+    <p>Triggerbot automatically fires when the crosshair is on a target.</p>
+
+    <h2 id="tb-enabled">Enabled</h2>
+    <p>Master switch for the Triggerbot feature.</p>
+
+    <h2 id="tb-first-slow">First Slow</h2>
+    <p>Slows down while firing to mimic the aim slowdown caused by holding the left mouse button.</p>
+
+    <h2 id="tb-hit-chance">Hit Chance</h2>
+    <p>Calculates hit chance from weapon spread and the target hitbox; only fires when the hit chance is above the set value.</p>
+
+    <h2 id="tb-interval">Interval Delay</h2>
+    <p>Controls the delay between burst shots.</p>
+
+    <h2 id="tb-distance">Distance</h2>
+    <p>Filters out targets beyond the specified distance.</p>
+
+    <h2 id="tb-hitbox">Hitbox</h2>
+    <p>The target hitboxes allowed to be fired upon.</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.sidebar .nav-group > summary').forEach(function (summary) {
+      summary.addEventListener('click', function (e) {
+        e.preventDefault();
+        summary.parentElement.classList.toggle('collapsed');
+      });
+    });
+
+    document.querySelectorAll('.sidebar a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.sidebar a.active').forEach(function (a) {
+          a.classList.remove('active');
+        });
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body></html>

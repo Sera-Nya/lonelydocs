@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lonely Docs — Accuracy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Lonely<span class="accent"> Docs</span></div>
+  </header>
+
+  <aside class="sidebar">
+    <details class="nav-group" open>
+      <summary>Getting Started</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#intro">Introduction</a>
+      </div></div>
+    </details>
+    <details class="nav-group" open>
+      <summary>Features</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#usage">Usage</a>
+        <a href="index.html#faq">FAQ</a>
+
+        <details class="nav-group sub collapsed">
+          <summary>Aimbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="aimbot.html#wp-group">Weapon Group</a>
+            <a href="aimbot.html#ab-enabled">Enabled</a>
+            <a href="aimbot.html#ab-mouse-sync">Mouse Sync</a>
+            <a href="aimbot.html#ab-activate">Activate</a>
+            <a href="aimbot.html#ab-mode">Mode</a>
+            <a href="aimbot.html#ab-move">Move</a>
+            <a href="aimbot.html#ab-precise">Precise</a>
+            <a href="aimbot.html#ab-humanized">Humanized</a>
+            <a href="aimbot.html#ab-automatic">AutoMatic</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Aimbot Limits</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="aimbot-limits.html#ab-aim-time">Aim Time Limit</a>
+            <a href="aimbot-limits.html#ab-distance">Distance</a>
+            <a href="aimbot-limits.html#ab-smooth">Smooth</a>
+            <a href="aimbot-limits.html#ab-predict">Predict</a>
+            <a href="aimbot-limits.html#ab-hit-chance">Hit Chance</a>
+            <a href="aimbot-limits.html#ab-delay-shoot">Delay Shoot</a>
+            <a href="aimbot-limits.html#ab-first-slow">First Slow</a>
+            <a href="aimbot-limits.html#ab-rapid-fire">Rapid Fire</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Triggerbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="triggerbot.html#tb-enabled">Enabled</a>
+            <a href="triggerbot.html#tb-first-slow">First Slow</a>
+            <a href="triggerbot.html#tb-hit-chance">Hit Chance</a>
+            <a href="triggerbot.html#tb-interval">Interval Delay</a>
+            <a href="triggerbot.html#tb-distance">Distance</a>
+            <a href="triggerbot.html#tb-hitbox">Hitbox</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub" open>
+          <summary>Accuracy</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="#ac-norecoil" class="active">No Recoil</a>
+            <a href="#ac-nospread">No Spread</a>
+            <a href="#ac-noshake">No Screen Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Misc</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="misc.html#mi-bunnyhop">Bunnyhop</a>
+            <a href="misc.html#mi-fastladder">Fast Ladder</a>
+            <a href="misc.html#mi-viewmodel">Viewmodel</a>
+            <a href="misc.html#mi-nofog">No Fog</a>
+            <a href="misc.html#mi-novomit">No Vomit</a>
+            <a href="misc.html#mi-flashboost">Flash Boost</a>
+            <a href="misc.html#mi-fullbright">FullBright</a>
+            <a href="misc.html#mi-antishake">Anti Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Settings</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="settings.html#st-watermark">Watermark</a>
+          </div></div>
+        </details>
+      </div></div>
+    </details>
+  </aside>
+
+  <main class="content">
+    <h1>Accuracy</h1>
+    <p>Removes weapon recoil, spread, and screen shake.</p>
+
+    <h2 id="ac-norecoil">No Recoil</h2>
+    <p>Removes weapon recoil; the view no longer kicks up while firing.</p>
+
+    <h2 id="ac-nospread">No Spread</h2>
+    <p>Removes random bullet spread; shots land at the crosshair center.</p>
+
+    <h2 id="ac-noshake">No Screen Shake</h2>
+    <p>Disables screen shake (e.g., Tank footsteps, explosions).</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.sidebar .nav-group > summary').forEach(function (summary) {
+      summary.addEventListener('click', function (e) {
+        e.preventDefault();
+        summary.parentElement.classList.toggle('collapsed');
+      });
+    });
+
+    document.querySelectorAll('.sidebar a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.sidebar a.active').forEach(function (a) {
+          a.classList.remove('active');
+        });
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body></html>

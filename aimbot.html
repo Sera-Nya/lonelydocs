@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lonely Docs — Aimbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Lonely<span class="accent"> Docs</span></div>
+  </header>
+
+  <aside class="sidebar">
+    <details class="nav-group" open>
+      <summary>Getting Started</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#intro">Introduction</a>
+      </div></div>
+    </details>
+    <details class="nav-group" open>
+      <summary>Features</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#usage">Usage</a>
+        <a href="index.html#faq">FAQ</a>
+
+        <details class="nav-group sub" open>
+          <summary>Aimbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="#wp-group" class="active">Weapon Group</a>
+            <a href="#ab-enabled">Enabled</a>
+            <a href="#ab-mouse-sync">Mouse Sync</a>
+            <a href="#ab-activate">Activate</a>
+            <a href="#ab-mode">Mode</a>
+            <a href="#ab-move">Move</a>
+            <a href="#ab-precise">Precise</a>
+            <a href="#ab-humanized">Humanized</a>
+            <a href="#ab-automatic">AutoMatic</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Aimbot Limits</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="aimbot-limits.html#ab-aim-time">Aim Time Limit</a>
+            <a href="aimbot-limits.html#ab-distance">Distance</a>
+            <a href="aimbot-limits.html#ab-smooth">Smooth</a>
+            <a href="aimbot-limits.html#ab-predict">Predict</a>
+            <a href="aimbot-limits.html#ab-hit-chance">Hit Chance</a>
+            <a href="aimbot-limits.html#ab-delay-shoot">Delay Shoot</a>
+            <a href="aimbot-limits.html#ab-first-slow">First Slow</a>
+            <a href="aimbot-limits.html#ab-rapid-fire">Rapid Fire</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Triggerbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="triggerbot.html#tb-enabled">Enabled</a>
+            <a href="triggerbot.html#tb-first-slow">First Slow</a>
+            <a href="triggerbot.html#tb-hit-chance">Hit Chance</a>
+            <a href="triggerbot.html#tb-interval">Interval Delay</a>
+            <a href="triggerbot.html#tb-distance">Distance</a>
+            <a href="triggerbot.html#tb-hitbox">Hitbox</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Accuracy</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="accuracy.html#ac-norecoil">No Recoil</a>
+            <a href="accuracy.html#ac-nospread">No Spread</a>
+            <a href="accuracy.html#ac-noshake">No Screen Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Misc</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="misc.html#mi-bunnyhop">Bunnyhop</a>
+            <a href="misc.html#mi-fastladder">Fast Ladder</a>
+            <a href="misc.html#mi-viewmodel">Viewmodel</a>
+            <a href="misc.html#mi-nofog">No Fog</a>
+            <a href="misc.html#mi-novomit">No Vomit</a>
+            <a href="misc.html#mi-flashboost">Flash Boost</a>
+            <a href="misc.html#mi-fullbright">FullBright</a>
+            <a href="misc.html#mi-antishake">Anti Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Settings</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="settings.html#st-watermark">Watermark</a>
+          </div></div>
+        </details>
+      </div></div>
+    </details>
+  </aside>
+
+  <main class="content">
+    <h1>Aimbot</h1>
+    <p>Aimbot automatically aims at targets. After enabling Weapon Group, each weapon type gets its own independent configuration; otherwise the Global setting is used. Aimbot settings are split into the "Aimbot" section and the "Limits" section, described below.</p>
+
+    <h2 id="wp-group">Weapon Group</h2>
+    <p>A separate configuration set for each weapon type. Uses the independent configuration after Aimbot Enabled is on; otherwise falls back to the Global setting.</p>
+
+    <h2 id="ab-enabled">Enabled</h2>
+    <p>Master switch for the Aimbot feature.</p>
+
+    <h2 id="ab-mouse-sync">Mouse Sync</h2>
+    <p>Aimbot only works while the mouse is moving.</p>
+
+    <h2 id="ab-activate">Activate</h2>
+    <p>Activation mode: "on Attack" works while the left mouse button is held; "Always" works at all times.</p>
+
+    <h2 id="ab-mode">Mode</h2>
+    <p>"Normal" visibly and smoothly moves the view — the mode used in most cases. "Silent" aims silently in your local view, but spectators can see the view move. "Perfect Silent" aims silently both locally and on the server, so spectators cannot see the view move either.</p>
+
+    <h2 id="ab-move">Move</h2>
+    <p>"Normal" moves the view at a constant speed. "Decrease" slows down as it gets closer to the target. "Ease in and out" adds easing at the start and end of aiming.</p>
+
+    <h2 id="ab-precise">Precise</h2>
+    <p>Improves Aimbot precision to increase hit rate.</p>
+
+    <h2 id="ab-humanized">Humanized</h2>
+    <p>Master switch and settings for humanization, making the aim trajectory closer to a real person:</p>
+    <ul>
+      <li><strong>Start Speed</strong>: The starting speed of the Aimbot aim.</li>
+      <li><strong>Stop Speed</strong>: The stopping speed of the Aimbot aim.</li>
+      <li><strong>Line Deviation</strong>: Randomly adds curvature while aiming.</li>
+      <li><strong>Random Smooth</strong>: Randomly accelerates and decelerates while aiming.</li>
+      <li><strong>Random Hit Point</strong>: Picks a random point as the target point each time it aims.</li>
+      <li><strong>Reaction Speed</strong>: Delays the allowed Aimbot work by a specified number of milliseconds after spotting a target; also affects the aim trajectory.</li>
+    </ul>
+
+    <h2 id="ab-automatic">AutoMatic</h2>
+    <p>Switches the firing mode to fully automatic.</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.sidebar .nav-group > summary').forEach(function (summary) {
+      summary.addEventListener('click', function (e) {
+        e.preventDefault();
+        summary.parentElement.classList.toggle('collapsed');
+      });
+    });
+
+    document.querySelectorAll('.sidebar a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.sidebar a.active').forEach(function (a) {
+          a.classList.remove('active');
+        });
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body></html>

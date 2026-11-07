@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lonely Docs — Aimbot Limits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Lonely<span class="accent"> Docs</span></div>
+  </header>
+
+  <aside class="sidebar">
+    <details class="nav-group" open>
+      <summary>Getting Started</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#intro">Introduction</a>
+      </div></div>
+    </details>
+    <details class="nav-group" open>
+      <summary>Features</summary>
+      <div class="nav-content"><div class="nav-inner">
+        <a href="index.html#usage">Usage</a>
+        <a href="index.html#faq">FAQ</a>
+
+        <details class="nav-group sub collapsed">
+          <summary>Aimbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="aimbot.html#wp-group">Weapon Group</a>
+            <a href="aimbot.html#ab-enabled">Enabled</a>
+            <a href="aimbot.html#ab-mouse-sync">Mouse Sync</a>
+            <a href="aimbot.html#ab-activate">Activate</a>
+            <a href="aimbot.html#ab-mode">Mode</a>
+            <a href="aimbot.html#ab-move">Move</a>
+            <a href="aimbot.html#ab-precise">Precise</a>
+            <a href="aimbot.html#ab-humanized">Humanized</a>
+            <a href="aimbot.html#ab-automatic">AutoMatic</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub" open>
+          <summary>Aimbot Limits</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="#ab-aim-time" class="active">Aim Time Limit</a>
+            <a href="#ab-distance">Distance</a>
+            <a href="#ab-smooth">Smooth</a>
+            <a href="#ab-predict">Predict</a>
+            <a href="#ab-hit-chance">Hit Chance</a>
+            <a href="#ab-delay-shoot">Delay Shoot</a>
+            <a href="#ab-first-slow">First Slow</a>
+            <a href="#ab-rapid-fire">Rapid Fire</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Triggerbot</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="triggerbot.html#tb-enabled">Enabled</a>
+            <a href="triggerbot.html#tb-first-slow">First Slow</a>
+            <a href="triggerbot.html#tb-hit-chance">Hit Chance</a>
+            <a href="triggerbot.html#tb-interval">Interval Delay</a>
+            <a href="triggerbot.html#tb-distance">Distance</a>
+            <a href="triggerbot.html#tb-hitbox">Hitbox</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Accuracy</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="accuracy.html#ac-norecoil">No Recoil</a>
+            <a href="accuracy.html#ac-nospread">No Spread</a>
+            <a href="accuracy.html#ac-noshake">No Screen Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Misc</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="misc.html#mi-bunnyhop">Bunnyhop</a>
+            <a href="misc.html#mi-fastladder">Fast Ladder</a>
+            <a href="misc.html#mi-viewmodel">Viewmodel</a>
+            <a href="misc.html#mi-nofog">No Fog</a>
+            <a href="misc.html#mi-novomit">No Vomit</a>
+            <a href="misc.html#mi-flashboost">Flash Boost</a>
+            <a href="misc.html#mi-fullbright">FullBright</a>
+            <a href="misc.html#mi-antishake">Anti Shake</a>
+          </div></div>
+        </details>
+
+        <details class="nav-group sub collapsed">
+          <summary>Settings</summary>
+          <div class="nav-content"><div class="nav-inner">
+            <a href="settings.html#st-watermark">Watermark</a>
+          </div></div>
+        </details>
+      </div></div>
+    </details>
+  </aside>
+
+  <main class="content">
+    <h1>Aimbot Limits</h1>
+    <p>The following settings constrain the Aimbot's working range and speed, improving stealth and stability.</p>
+
+    <h2 id="ab-aim-time">Aim Time Limit</h2>
+    <p>Limits how long the Aimbot can aim; when Humanized is enabled, it adds an ease-out effect when the Aimbot stops.</p>
+
+    <h2 id="ab-distance">Distance</h2>
+    <p>Filters out targets beyond the specified distance.</p>
+
+    <h2 id="ab-smooth">Smooth</h2>
+    <p>Controls the Aimbot aim speed; higher values are slower.</p>
+
+    <h2 id="ab-predict">Predict</h2>
+    <p>Predicts the future position of the target point using target velocity, latency, and the lerp value.</p>
+
+    <h2 id="ab-hit-chance">Hit Chance</h2>
+    <p>Calculates hit chance from weapon spread and the target hitbox; only aims when the hit chance is above the set value.</p>
+
+    <h2 id="ab-delay-shoot">Delay Shoot</h2>
+    <p>Delays firing by a specified number of milliseconds after the fire key is pressed, preventing premature shots before the Aimbot has aimed at the target. Recommended.</p>
+
+    <h2 id="ab-first-slow">First Slow</h2>
+    <p>Slows down while firing to mimic the aim slowdown caused by holding the left mouse button; when Delay Shoot is enabled, it activates 20 ms earlier.</p>
+
+    <h2 id="ab-rapid-fire">Rapid Fire</h2>
+    <p>After firing, uses right-click pushes to override the fire cooldown for rapid fire; after the push count reaches the Pushs limit, it waits for the push counter to reset before working again.</p>
+  </main>
+
+  <script>
+    document.querySelectorAll('.sidebar .nav-group > summary').forEach(function (summary) {
+      summary.addEventListener('click', function (e) {
+        e.preventDefault();
+        summary.parentElement.classList.toggle('collapsed');
+      });
+    });
+
+    document.querySelectorAll('.sidebar a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.sidebar a.active').forEach(function (a) {
+          a.classList.remove('active');
+        });
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body></html>
